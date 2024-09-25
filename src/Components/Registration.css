@@ -1,0 +1,65 @@
+/* Full-page container to center the form vertically and horizontally */
+.page-container {
+    display: flex;
+    justify-content: center;  /* Centers the form horizontally */
+    align-items: center;      /* Centers the form vertically */
+    height: 100vh;            /* Makes the container take the full viewport height */
+    background-color: #e0e0e0; /* Optional background color for the page */
+}
+
+/* Container for the registration form */
+.registration-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form styles */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input field styles */
+.input-field {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Focus effect on input fields */
+.input-field:focus {
+    border-color: #219ebc;
+}
+
+/* Submit button styles */
+.submit-button {
+    padding: 12px;
+    background-color: #023e8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect on the submit button */
+.submit-button:hover {
+    background-color: #0077b6;
+}
+
+/* Error message styling */
+.error-message {
+    color: #d9534f;
+    margin-top: 10px;
+}

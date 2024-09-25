@@ -1,0 +1,65 @@
+/* Navbar.css */
+
+/* General styles for the Navbar */
+.navbar {
+    padding: 1rem; /* Add some padding */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Increase font size for the brand */
+    font-weight: bold; /* Bold brand text */
+}
+
+.nav-link {
+    color: white !important; /* Ensure nav links are white */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Styles for the cart dropdown */
+#basic-nav-dropdown {
+    max-height: 300px; /* Limit height of the dropdown */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between; /* Space between item title and price */
+}
+
+/* Styles for buttons */
+.btn {
+    margin-left: 0.5rem; /* Space between buttons */
+}
+
+.btn-outline-light {
+    border-color: white; /* Border color for buttons */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem; /* Smaller brand text on mobile */
+    }
+
+    .nav-link {
+        font-size: 0.9rem; /* Smaller nav link text on mobile */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Smaller button text on mobile */
+    }
+}
+
+/* Navbar background color */
+.navbar {
+    background-color: #023e8a; /* Primary color */
+}
+
+.navbar .nav-link.active {
+    color: #ffd700; /* Active link color */
+}
+
