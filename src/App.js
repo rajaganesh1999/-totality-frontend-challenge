@@ -6,7 +6,7 @@ import Register from './Components/Registration';
 import Navbar from './Components/Navbar'; 
 import Home from './Components/Home'; 
 import Cart from './Components/Cart'; 
-import Checkout from './Components/Checkout'; // Import Checkout
+import Checkout from './Components/Checkout'; 
 import NotFound from './Components/NotFound'; 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from './firebase'; 
@@ -22,8 +22,8 @@ function App() {
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/cart" element={<Cart />} />
-                    <Route path="/checkout" element={user ? <Checkout /> : <Navigate to="/login" />} /> {/* Only allow authenticated users */}
+                    <Route path="/cart" element={user ? <Cart /> : <Navigate to="/login" />} /> {/* Protect the cart route */}
+                    <Route path="/checkout" element={user ? <Checkout /> : <Navigate to="/login" />} />
                     <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
                     <Route path="/register" element={user ? <Navigate to="/" /> : <Register />} />
                     <Route path="*" element={<NotFound />} />

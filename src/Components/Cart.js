@@ -1,6 +1,8 @@
 // src/Components/Cart.js
 import React, { useState } from 'react';
 import { useCart } from '../CartContext'; 
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../firebase'; // Ensure to import auth
 import { useNavigate } from 'react-router-dom'; 
 import './Cart.css';
 import './Home.css';
@@ -58,11 +60,18 @@ const Cart = () => {
         }
     ]);
 
+    const [user] = useAuthState(auth); // Get the current user state
     const navigate = useNavigate(); // Initialize navigate
 
-    const handleCheckout = () => {
-        navigate('/checkout'); // Navigate to the checkout page
-    };
+    // If user is not logged in, show a message
+    if (!user) {
+        return (
+            <div className="cart-container">
+                <h2>Please log in to view your cart.</h2>
+                <button onClick={() => navigate('/login')}>Login</button>
+            </div>
+        );
+    }
 
     return (
         <div className="cart-container">
@@ -94,7 +103,13 @@ const Cart = () => {
                 <div className="cart-summary">
                     <p>Total Items: {totalCount}</p>
                     <p>Total Cost: ${totalCost.toFixed(2)}</p>
-                    <button className="checkout-button" onClick={handleCheckout}>Checkout</button> {/* Add onClick handler */}
+                    <button 
+                        className="checkout-button" 
+                        onClick={() => navigate('/checkout')} 
+                        disabled={cart.length === 0} // Disable button if cart is empty
+                    >
+                        Checkout
+                    </button>
                 </div>
             )}
 
