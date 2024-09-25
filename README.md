@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Project Overview
+
+I recently completed a property rental platform project as part of my development challenge. The platform allows users to browse various properties, add them to their cart, and proceed to checkout with a simple and user-friendly interface.
+
+Tech Stack
+
+For this project, I utilized the following technologies:
+
+React.js: This was the core library I used to build the frontend, providing a responsive and dynamic user experience.
+Firebase: I integrated Firebase for user authentication, allowing users to log in or register easily.
+Bootstrap: To enhance the visual appeal and responsiveness of the application, I used Bootstrap for styling.
+React Router: This was implemented to manage navigation between different pages of the application seamlessly.
+Development Approach
+
+User Authentication: I set up user authentication with Firebase, enabling secure login and registration for users.
+Cart Functionality: I created a context for managing the cart, allowing users to add, remove, and view items conveniently.
+Checkout Process: I designed a checkout page where users can review their bookings and submit their details for confirmation.
+Responsive Design: Throughout the development, I ensured that the platform is responsive and user-friendly on both desktop and mobile devices.
